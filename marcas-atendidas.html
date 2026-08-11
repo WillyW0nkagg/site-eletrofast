@@ -15,7 +15,7 @@
 <body>
 <a class="skip-link" href="#main">Pular para o conteúdo</a>
 
-<svg style="display:none" aria-hidden="true">
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden;">
   <symbol id="icon-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
   <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
   <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2a8.1 8.1 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1s-.6.8-.8 1c-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5s-.6-1.5-.9-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.8c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3Z"/></symbol>
@@ -28,7 +28,7 @@
     </a>
     <nav class="main-nav" aria-label="Navegação principal">
       <ul>
-        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="index.html#servicos">Serviços</a></li>
         <li><a href="marcas-atendidas.html" aria-current="page">Marcas</a></li>
         <li><a href="nossas-lojas.html">Lojas</a></li>
         <li><a href="pecas-originais.html">Peças</a></li>
@@ -37,31 +37,37 @@
       </ul>
     </nav>
     <div class="header-ctas">
-      <a class="btn btn-store" href="loja.html">
-        <svg width="18" height="18"><use href="#icon-bag"/></svg> Loja Online
-      </a>
-      <a class="btn btn-ghost" href="contato.html">Contato</a>
-      <a class="btn btn-primary" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener">
-        <svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp
-      </a>
+      <a class="btn btn-store" href="loja.html"><svg width="18" height="18"><use href="#icon-bag"/></svg> Loja Online</a>
+      <a class="btn btn-gold" href="premium.html">Linha Premium</a>
+      <div class="wa-dropdown">
+        <button type="button" class="btn btn-whatsapp wa-dropdown-trigger"><svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp</button>
+        <div class="wa-dropdown-menu">
+          <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20para%20eletroport%C3%A1teis%20e%20linha%20branca." target="_blank" rel="noopener">Eletroportáteis e linha branca</a>
+          <a href="https://wa.me/554134344000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20premium." target="_blank" rel="noopener">Linha Premium</a>
+        </div>
+      </div>
     </div>
     <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
   <nav class="mobile-nav" aria-label="Navegação mobile">
-    <a class="btn btn-store btn-block" href="loja.html">
-      <svg width="18" height="18"><use href="#icon-bag"/></svg> Loja Online
-    </a>
-    <a href="servicos.html">Serviços</a>
+        <a href="index.html#servicos">Serviços</a>
     <a href="marcas-atendidas.html">Marcas</a>
     <a href="nossas-lojas.html">Lojas</a>
     <a href="pecas-originais.html">Peças</a>
     <a href="blog/index.html">Blog</a>
     <a href="sobre.html">Sobre nós</a>
     <a href="contato.html">Contato</a>
-    <a class="btn btn-whatsapp btn-block" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener">
-      <svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp
-    </a>
-  </nav>
+  
+    <a class="btn btn-store btn-block" href="loja.html"><svg width="18" height="18"><use href="#icon-bag"/></svg> Loja Online</a>
+    <a class="btn btn-gold btn-block" href="premium.html">Linha Premium</a>
+    <div class="wa-dropdown btn-block">
+      <button type="button" class="btn btn-whatsapp btn-block wa-dropdown-trigger"><svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp</button>
+      <div class="wa-dropdown-menu">
+          <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20para%20eletroport%C3%A1teis%20e%20linha%20branca." target="_blank" rel="noopener">Eletroportáteis e linha branca</a>
+          <a href="https://wa.me/554134344000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20premium." target="_blank" rel="noopener">Linha Premium</a>
+      </div>
+    </div>
+</nav>
 </header>
 
 <main id="main">
@@ -82,54 +88,87 @@
         <a class="btn btn-sm btn-primary" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Quero%20confirmar%20se%20voc%C3%AAs%20atendem%20a%20minha%20marca." target="_blank" rel="noopener">Consultar marcas atendidas</a>
       </div>
 
+      <h2 style="margin-bottom: var(--space-5);" class="reveal">Autorizadas</h2>
       <div class="brand-grid reveal-stagger">
         <div class="brand-chip"><img src="img/marcas/agratto.png" alt="Agratto" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/ariete.png" alt="Ariete" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/ariston.png" alt="Ariston" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/benmax.png" alt="Benmax" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/benmax.png" alt="Benmax" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/bertazzoni-la-germania.png" alt="Bertazzoni La Germania" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
         <div class="brand-chip"><img src="img/marcas/cadence.png" alt="Cadence" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/caminetto.png" alt="Caminetto" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/crissair.png" alt="Crissair" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/cuisinart.jpg" alt="Cuisinart" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/concept-grill.png" alt="Concept Grill" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/crissair.png" alt="Crissair" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/cuisinart.jpg" alt="Cuisinart" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
         <div class="brand-chip"><img src="img/marcas/daihatsu.png" alt="Daihatsu" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/delonghi.jpg" alt="Delonghi" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/desidrat.png" alt="Desidrat" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/elanto-elegancia.png" alt="Elanto Elegância" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/elettromec.png" alt="Elettromec" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/evol.jpg" alt="Evol" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/falmec.png" alt="Falmec" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/franke.jpg" alt="Franke" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/elanto-elegancia.png" alt="Elanto" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/evol.jpg" alt="Evol" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/franke.jpg" alt="Franke" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
         <div class="brand-chip"><img src="img/marcas/gama.png" alt="Gama" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/gelopar.png" alt="Gelopar" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/glem.png" alt="GLEM Eletrodomésticos Premium" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/gorenje.png" alt="Gorenje" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/glem-gas.png" alt="Glem Gas" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/gorenje.png" alt="Gorenje" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/hisense.png" alt="Hisense" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
         <div class="brand-chip"><img src="img/marcas/kenwood.png" alt="Kenwood" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/labravia.png" alt="Labravia" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/labravia-beauty.png" alt="Labravia beauty" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/lizz.jpg" alt="Lizz" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/marchesoni.png" alt="Marchesoni" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/mgbp.png" alt="MGBP do Brasil Premium" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/mcassab.png" alt="Mcassab" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/mgbp.png" alt="MGBP" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/mondial.jpg" alt="Mondial" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/mq-profissional.png" alt="M/Q Profissional" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/mq-profissional.png" alt="MQ Professional" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/olimpia-splendid.png" alt="Olimpia Splendid" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/ooni.png" alt="Ooni" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/oster.jpg" alt="Oster" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/parlux.png" alt="Parlux" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/polar.png" alt="Polar" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/safanelli.png" alt="Safanelli" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/skymsen.png" alt="Skymsen" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/smeg.png" alt="Smeg" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/speed-queen.png" alt="Speed Queen" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/smeg.png" alt="Smeg" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/spicy.png" alt="Spicy" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/speed-queen.png" alt="Speed Queen" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
         <div class="brand-chip"><img src="img/marcas/splendore.png" alt="Splendore" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/sub-zero.png" alt="Sub Zero" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/suggar.jpg" alt="Suggar" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/taiff.png" alt="Taiff" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/thermomatic.png" alt="Thermomatic" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/u-line.png" alt="U-Line" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/ultra.png" alt="Ultra" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/ventisol.png" alt="Ventisol" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/viking.png" alt="Viking" loading="lazy"></div>
         <div class="brand-chip"><img src="img/marcas/wap.png" alt="Wap" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/wolf.png" alt="Wolf" loading="lazy"></div>
+      </div>
+
+      <h2 style="margin-top: var(--space-10); margin-bottom: var(--space-5);" class="reveal">Especializadas</h2>
+      <div class="brand-grid reveal-stagger">
+        <div class="brand-chip"><img src="img/marcas/ariston.png" alt="Ariston" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/bella.svg" alt="Bella" loading="lazy"></div>
+        <div class="brand-chip">Belmicro</div>
+        <div class="brand-chip"><img src="img/marcas/best.png" alt="Best" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/brastemp.png" alt="Brastemp" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/cata.svg" alt="Cata" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/caminetto.png" alt="Caminetto" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/consul.png" alt="Consul" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/elica.png" alt="Elica" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/electrolux.png" alt="Electrolux" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/elettromec.png" alt="Elettromec" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/elgin.png" alt="Elgin" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/itatiaia.png" alt="Itatiaia" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/falmec.png" alt="Falmec" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/fama.png" alt="Fama" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/fischer.png" alt="Fischer" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/gelopar.png" alt="Gelopar" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/hq.png" alt="Hq" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/invita.png" alt="Invita" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/labravia.png" alt="Labravia" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/lg.png" alt="LG" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/lofra.png" alt="Lofra" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/midea.png" alt="Midea" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/miele.png" alt="Miele" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/ooni.png" alt="Ooni" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/samsung.png" alt="Samsung" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/sub-zero.png" alt="Sub-Zero" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/tecno.png" alt="Tecno" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/tramontina.png" alt="Tramontina" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/venax.png" alt="Venax" loading="lazy"></div>
+        <div class="brand-chip"><img src="img/marcas/viking.png" alt="Viking" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
+        <div class="brand-chip"><img src="img/marcas/wolf.png" alt="Wolf" loading="lazy"><span class="brand-badge-premium">Premium</span></div>
       </div>
     </div>
   </section>
@@ -139,9 +178,13 @@
       <h2 class="reveal">Não encontrou sua marca na lista?</h2>
       <p class="lede reveal" style="margin-inline:auto">Fale com a gente antes de se deslocar — confirmamos rapidamente pelo WhatsApp.</p>
       <div class="final-cta-actions reveal">
-        <a class="btn btn-whatsapp" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Quero%20confirmar%20se%20voc%C3%AAs%20atendem%20a%20minha%20marca." target="_blank" rel="noopener">
-          <svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Consultar no WhatsApp
-        </a>
+        <div class="wa-dropdown wa-dropdown--up wa-dropdown--side">
+          <button type="button" class="btn btn-whatsapp wa-dropdown-trigger"><svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Consultar no WhatsApp</button>
+          <div class="wa-dropdown-menu">
+            <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20para%20eletroport%C3%A1teis%20e%20linha%20branca." target="_blank" rel="noopener">Eletroportáteis e linha branca</a>
+            <a href="https://wa.me/554134344000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20premium." target="_blank" rel="noopener">Linha Premium</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -182,11 +225,11 @@
       <div>
         <h4>Unidades</h4>
         <ul>
-          <li>Cabral</li>
-          <li>Alto da XV</li>
-          <li>Rebouças</li>
-          <li>São Braz</li>
-          <li>Sítio Cercado</li>
+          <li><a href="nossas-lojas.html#unidade-cabral">Cabral</a></li>
+          <li><a href="nossas-lojas.html#unidade-alto-da-xv">Alto da XV</a></li>
+          <li><a href="nossas-lojas.html#unidade-reboucas">Rebouças</a></li>
+          <li><a href="nossas-lojas.html#unidade-sao-braz">São Braz</a></li>
+          <li><a href="nossas-lojas.html#unidade-sitio-cercado">Sítio Cercado</a></li>
         </ul>
       </div>
     </div>
@@ -197,10 +240,16 @@
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-  <svg width="24" height="24"><use href="#icon-whatsapp"/></svg>
-  <span>WhatsApp</span>
-</a>
+<div class="wa-dropdown wa-dropdown--up wa-float-wrap">
+  <button type="button" class="wa-float wa-dropdown-trigger" aria-label="Falar no WhatsApp">
+    <svg width="24" height="24"><use href="#icon-whatsapp"/></svg>
+    <span>WhatsApp</span>
+  </button>
+  <div class="wa-dropdown-menu">
+          <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20para%20eletroport%C3%A1teis%20e%20linha%20branca." target="_blank" rel="noopener">Eletroportáteis e linha branca</a>
+          <a href="https://wa.me/554134344000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20premium." target="_blank" rel="noopener">Linha Premium</a>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 </body>

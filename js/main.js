@@ -45,6 +45,22 @@ if (menuToggle && mobileNav) {
   });
 }
 
+// WhatsApp CTA submenu (eletroportáteis x linha premium): tap-to-toggle for touch devices
+document.querySelectorAll('.wa-dropdown').forEach((dropdown) => {
+  const trigger = dropdown.querySelector('.wa-dropdown-trigger');
+  trigger?.addEventListener('click', (e) => {
+    e.preventDefault();
+    const isOpen = dropdown.classList.contains('is-open');
+    document.querySelectorAll('.wa-dropdown.is-open').forEach((d) => d.classList.remove('is-open'));
+    if (!isOpen) dropdown.classList.add('is-open');
+  });
+});
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.wa-dropdown')) {
+    document.querySelectorAll('.wa-dropdown.is-open').forEach((d) => d.classList.remove('is-open'));
+  }
+});
+
 // FAQ accordion
 document.querySelectorAll('.faq-item').forEach((item) => {
   const question = item.querySelector('.faq-question');
@@ -73,7 +89,7 @@ if ('IntersectionObserver' in window && revealTargets.length) {
         }
       });
     },
-    { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
+    { threshold: 0, rootMargin: '0px 0px -60px 0px' }
   );
   revealTargets.forEach((el) => observer.observe(el));
 } else {
@@ -83,18 +99,36 @@ if ('IntersectionObserver' in window && revealTargets.length) {
 // Loja: filtro de categoria
 const categoryFilter = document.querySelector('.category-filter');
 if (categoryFilter) {
-  const filterButtons = categoryFilter.querySelectorAll('button');
+  const filterButtons = categoryFilter.querySelectorAll('button[data-filter]');
+  const allToggleButtons = categoryFilter.querySelectorAll('button');
   const productCards = document.querySelectorAll('.product-card');
+  const filterDropdown = categoryFilter.querySelector('.filter-dropdown');
+  const filterDropdownTrigger = categoryFilter.querySelector('.filter-dropdown-trigger');
+
   filterButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      filterButtons.forEach((b) => b.classList.remove('is-active'));
+      allToggleButtons.forEach((b) => b.classList.remove('is-active'));
       button.classList.add('is-active');
+      if (filterDropdownTrigger && button.closest('.filter-dropdown-menu')) {
+        filterDropdownTrigger.classList.add('is-active');
+      }
+      filterDropdown?.classList.remove('is-open');
       const filter = button.dataset.filter;
       productCards.forEach((card) => {
         const show = filter === 'all' || card.dataset.category === filter;
         card.style.display = show ? '' : 'none';
       });
     });
+  });
+
+  filterDropdownTrigger?.addEventListener('click', (e) => {
+    e.preventDefault();
+    filterDropdown.classList.toggle('is-open');
+  });
+  document.addEventListener('click', (e) => {
+    if (filterDropdown && !e.target.closest('.filter-dropdown')) {
+      filterDropdown.classList.remove('is-open');
+    }
   });
 }
 

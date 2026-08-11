@@ -15,7 +15,7 @@
 <body>
 <a class="skip-link" href="#main">Pular para o conteúdo</a>
 
-<svg style="display:none" aria-hidden="true">
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden;">
   <symbol id="icon-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
   <symbol id="icon-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.6 7-11.5A7 7 0 0 0 5 9.5C5 14.4 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></symbol>
   <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
@@ -29,7 +29,7 @@
     </a>
     <nav class="main-nav" aria-label="Navegação principal">
       <ul>
-        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="index.html#servicos">Serviços</a></li>
         <li><a href="marcas-atendidas.html">Marcas</a></li>
         <li><a href="nossas-lojas.html" aria-current="page">Lojas</a></li>
         <li><a href="pecas-originais.html">Peças</a></li>
@@ -38,31 +38,37 @@
       </ul>
     </nav>
     <div class="header-ctas">
-      <a class="btn btn-store" href="loja.html">
-        <svg width="18" height="18"><use href="#icon-bag"/></svg> Loja Online
-      </a>
-      <a class="btn btn-ghost" href="contato.html">Contato</a>
-      <a class="btn btn-primary" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener">
-        <svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp
-      </a>
+      <a class="btn btn-store" href="loja.html"><svg width="18" height="18"><use href="#icon-bag"/></svg> Loja Online</a>
+      <a class="btn btn-gold" href="premium.html">Linha Premium</a>
+      <div class="wa-dropdown">
+        <button type="button" class="btn btn-whatsapp wa-dropdown-trigger"><svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp</button>
+        <div class="wa-dropdown-menu">
+          <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20para%20eletroport%C3%A1teis%20e%20linha%20branca." target="_blank" rel="noopener">Eletroportáteis e linha branca</a>
+          <a href="https://wa.me/554134344000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20premium." target="_blank" rel="noopener">Linha Premium</a>
+        </div>
+      </div>
     </div>
     <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
   <nav class="mobile-nav" aria-label="Navegação mobile">
-    <a class="btn btn-store btn-block" href="loja.html">
-      <svg width="18" height="18"><use href="#icon-bag"/></svg> Loja Online
-    </a>
-    <a href="servicos.html">Serviços</a>
+        <a href="index.html#servicos">Serviços</a>
     <a href="marcas-atendidas.html">Marcas</a>
     <a href="nossas-lojas.html">Lojas</a>
     <a href="pecas-originais.html">Peças</a>
     <a href="blog/index.html">Blog</a>
     <a href="sobre.html">Sobre nós</a>
     <a href="contato.html">Contato</a>
-    <a class="btn btn-whatsapp btn-block" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener">
-      <svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp
-    </a>
-  </nav>
+  
+    <a class="btn btn-store btn-block" href="loja.html"><svg width="18" height="18"><use href="#icon-bag"/></svg> Loja Online</a>
+    <a class="btn btn-gold btn-block" href="premium.html">Linha Premium</a>
+    <div class="wa-dropdown btn-block">
+      <button type="button" class="btn btn-whatsapp btn-block wa-dropdown-trigger"><svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp</button>
+      <div class="wa-dropdown-menu">
+          <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20para%20eletroport%C3%A1teis%20e%20linha%20branca." target="_blank" rel="noopener">Eletroportáteis e linha branca</a>
+          <a href="https://wa.me/554134344000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20premium." target="_blank" rel="noopener">Linha Premium</a>
+      </div>
+    </div>
+</nav>
 </header>
 
 <main id="main">
@@ -79,7 +85,7 @@
     <div class="container">
       <div class="store-grid reveal-stagger">
 
-        <div class="store-card">
+        <div class="store-card" id="unidade-cabral">
           <span class="store-tag">Cabral</span>
           <div class="store-map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3603.9968869760037!2d-49.2464298!3d-25.4049148!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce535f944aaa9%3A0x8199608bf70c6577!2sEletro%20Fast%20-%20Cabral!5e0!3m2!1spt-BR!2sbr!4v1634671543588!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa — Eletro Fast Cabral" allowfullscreen></iframe></div>
           <h3>Eletro Fast Cabral</h3>
@@ -91,7 +97,7 @@
           </div>
         </div>
 
-        <div class="store-card">
+        <div class="store-card" id="unidade-alto-da-xv">
           <span class="store-tag">Alto da XV</span>
           <div class="store-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.3257998690924!2d-49.25044208498587!3d-25.427369083789582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce44be52682ed%3A0xbcd016347a1cdff8!2sRua+XV+de+Novembro%2C+2676+-+Alto+da+XV%2C+Curitiba+-+PR!5e0!3m2!1sen!2sbr!4v1501973668588" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa — Eletro Fast Alto da XV" allowfullscreen></iframe></div>
           <h3>Eletro Fast Alto da XV</h3>
@@ -103,7 +109,7 @@
           </div>
         </div>
 
-        <div class="store-card">
+        <div class="store-card" id="unidade-reboucas">
           <span class="store-tag">Rebouças</span>
           <div class="store-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.6178126138625!2d-49.26891978585548!3d-25.45103798377873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce48a537ce80d%3A0x3fdf6a731bd6f00e!2sR.+Alferes+Poli%2C+1712+-+Centro%2C+Curitiba+-+PR%2C+80220-050!5e0!3m2!1spt-BR!2sbr!4v1552484856558" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa — Eletro Fast Rebouças" allowfullscreen></iframe></div>
           <h3>Eletro Fast Rebouças</h3>
@@ -115,7 +121,7 @@
           </div>
         </div>
 
-        <div class="store-card">
+        <div class="store-card" id="unidade-sao-braz">
           <span class="store-tag">São Braz</span>
           <div class="store-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.7041483830867!2d-49.34295768498619!3d-25.414711983795474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce195f6fdf589%3A0x9d0ec9b853a5aec1!2sRua+Ant%C3%B4nio+Escorsin%2C+1086+-+Santa+Felicidade%2C+Curitiba+-+PR!5e0!3m2!1sen!2sbr!4v1501969207918" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa — Eletro Fast São Braz" allowfullscreen></iframe></div>
           <h3>Eletro Fast São Braz</h3>
@@ -127,7 +133,7 @@
           </div>
         </div>
 
-        <div class="store-card">
+        <div class="store-card" id="unidade-sitio-cercado">
           <span class="store-tag">Sítio Cercado</span>
           <div class="store-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599.8032694629205!2d-49.26085028492555!3d-25.544929243698046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcfbc74a8febb1%3A0x5ab6aac0fed595e3!2sR.%20S%C3%A3o%20Jos%C3%A9%20dos%20Pinhais%2C%201653%20-%20S%C3%ADtio%20Cercado%2C%20Curitiba%20-%20PR%2C%2081920-250!5e0!3m2!1spt-BR!2sbr!4v1595247880942!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa — Eletro Fast Sítio Cercado" allowfullscreen></iframe></div>
           <h3>Eletro Fast Sítio Cercado</h3>
@@ -189,11 +195,11 @@
       <div>
         <h4>Unidades</h4>
         <ul>
-          <li>Cabral</li>
-          <li>Alto da XV</li>
-          <li>Rebouças</li>
-          <li>São Braz</li>
-          <li>Sítio Cercado</li>
+          <li><a href="nossas-lojas.html#unidade-cabral">Cabral</a></li>
+          <li><a href="nossas-lojas.html#unidade-alto-da-xv">Alto da XV</a></li>
+          <li><a href="nossas-lojas.html#unidade-reboucas">Rebouças</a></li>
+          <li><a href="nossas-lojas.html#unidade-sao-braz">São Braz</a></li>
+          <li><a href="nossas-lojas.html#unidade-sitio-cercado">Sítio Cercado</a></li>
         </ul>
       </div>
     </div>
@@ -204,10 +210,16 @@
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-  <svg width="24" height="24"><use href="#icon-whatsapp"/></svg>
-  <span>WhatsApp</span>
-</a>
+<div class="wa-dropdown wa-dropdown--up wa-float-wrap">
+  <button type="button" class="wa-float wa-dropdown-trigger" aria-label="Falar no WhatsApp">
+    <svg width="24" height="24"><use href="#icon-whatsapp"/></svg>
+    <span>WhatsApp</span>
+  </button>
+  <div class="wa-dropdown-menu">
+          <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20para%20eletroport%C3%A1teis%20e%20linha%20branca." target="_blank" rel="noopener">Eletroportáteis e linha branca</a>
+          <a href="https://wa.me/554134344000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20premium." target="_blank" rel="noopener">Linha Premium</a>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 </body>

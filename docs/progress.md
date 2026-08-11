@@ -10,6 +10,7 @@
 
 ## ⏳ Pendente (A Fazer / Ajustes Finais)
 - [ ] Nenhum item pendente identificado no momento.
+* **página da loja:** a página da loja deverá sertransformada em outro site. Preciso primeiro saber como isso vai ser feito tecnicamente.
 
 ## 🎯 Próximo Passo Lógico
 Aguardar novos ajustes de conteúdo ou bugs reportados pelo cliente.

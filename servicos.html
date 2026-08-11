@@ -15,7 +15,7 @@
 <body>
 <a class="skip-link" href="#main">Pular para o conteúdo</a>
 
-<svg style="display:none" aria-hidden="true">
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden;">
   <symbol id="icon-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2.6-.7-.7-2.6 2.1-2.1Z"/></symbol>
   <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></symbol>
   <symbol id="icon-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
@@ -41,7 +41,7 @@
     </a>
     <nav class="main-nav" aria-label="Navegação principal">
       <ul>
-        <li><a href="servicos.html" aria-current="page">Serviços</a></li>
+        <li><a href="index.html#servicos">Serviços</a></li>
         <li><a href="marcas-atendidas.html">Marcas</a></li>
         <li><a href="nossas-lojas.html">Lojas</a></li>
         <li><a href="pecas-originais.html">Peças</a></li>
@@ -50,31 +50,37 @@
       </ul>
     </nav>
     <div class="header-ctas">
-      <a class="btn btn-store" href="loja.html">
-        <svg width="18" height="18"><use href="#icon-bag"/></svg> Loja Online
-      </a>
-      <a class="btn btn-ghost" href="contato.html">Contato</a>
-      <a class="btn btn-primary" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener">
-        <svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp
-      </a>
+      <a class="btn btn-store" href="loja.html"><svg width="18" height="18"><use href="#icon-bag"/></svg> Loja Online</a>
+      <a class="btn btn-gold" href="premium.html">Linha Premium</a>
+      <div class="wa-dropdown">
+        <button type="button" class="btn btn-whatsapp wa-dropdown-trigger"><svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp</button>
+        <div class="wa-dropdown-menu">
+          <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20para%20eletroport%C3%A1teis%20e%20linha%20branca." target="_blank" rel="noopener">Eletroportáteis e linha branca</a>
+          <a href="https://wa.me/554134344000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20premium." target="_blank" rel="noopener">Linha Premium</a>
+        </div>
+      </div>
     </div>
     <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
   <nav class="mobile-nav" aria-label="Navegação mobile">
-    <a class="btn btn-store btn-block" href="loja.html">
-      <svg width="18" height="18"><use href="#icon-bag"/></svg> Loja Online
-    </a>
-    <a href="servicos.html">Serviços</a>
+        <a href="index.html#servicos">Serviços</a>
     <a href="marcas-atendidas.html">Marcas</a>
     <a href="nossas-lojas.html">Lojas</a>
     <a href="pecas-originais.html">Peças</a>
     <a href="blog/index.html">Blog</a>
     <a href="sobre.html">Sobre nós</a>
     <a href="contato.html">Contato</a>
-    <a class="btn btn-whatsapp btn-block" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener">
-      <svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp
-    </a>
-  </nav>
+  
+    <a class="btn btn-store btn-block" href="loja.html"><svg width="18" height="18"><use href="#icon-bag"/></svg> Loja Online</a>
+    <a class="btn btn-gold btn-block" href="premium.html">Linha Premium</a>
+    <div class="wa-dropdown btn-block">
+      <button type="button" class="btn btn-whatsapp btn-block wa-dropdown-trigger"><svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp</button>
+      <div class="wa-dropdown-menu">
+          <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20para%20eletroport%C3%A1teis%20e%20linha%20branca." target="_blank" rel="noopener">Eletroportáteis e linha branca</a>
+          <a href="https://wa.me/554134344000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20premium." target="_blank" rel="noopener">Linha Premium</a>
+      </div>
+    </div>
+</nav>
 </header>
 
 <main id="main">
@@ -99,7 +105,7 @@
           </a>
         </div>
       </div>
-      <div class="category-grid reveal-stagger">
+      <div class="category-grid reveal-stagger" style="grid-template-columns: 1fr; max-width: 760px; margin-inline: auto;">
         <div class="category-card">
           <div class="ph ph-wide ph-media">
             <video class="ph-video" autoplay muted loop playsinline preload="metadata" poster="img/conserto-laboratorio.jpeg" aria-hidden="true">
@@ -110,51 +116,71 @@
           <div class="category-body">
             <span class="eyebrow">Uso do dia a dia</span>
             <h3>Eletrodomésticos</h3>
-            <div class="category-examples">
-              <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20geladeira." target="_blank" rel="noopener">Geladeiras</a>
-              <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20m%C3%A1quina%20de%20lavar." target="_blank" rel="noopener">Máquinas de lavar</a>
-              <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20secadora%20de%20roupas." target="_blank" rel="noopener">Secadoras de roupas</a>
-              <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20fog%C3%A3o." target="_blank" rel="noopener">Fogões</a>
-              <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20lava-lou%C3%A7as." target="_blank" rel="noopener">Lava-louças</a>
-              <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20micro-ondas." target="_blank" rel="noopener">Micro-ondas</a>
-              <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20air%20fryer." target="_blank" rel="noopener">Air fryers</a>
-              <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20aspirador%20de%20p%C3%B3." target="_blank" rel="noopener">Aspiradores de pó</a>
+            <div class="category-subgroup">
+              <span class="category-subgroup-label">❄️ Refrigeração</span>
+              <div class="category-examples">
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20adega%20port%C3%A1til." target="_blank" rel="noopener">Adega portátil</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20cervejeira%20port%C3%A1til." target="_blank" rel="noopener">Cervejeira portátil</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20frigobar." target="_blank" rel="noopener">Frigobar</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20m%C3%A1quina%20de%20gelo." target="_blank" rel="noopener">Máquina de gelo</a>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div class="category-card" id="climatizacao">
-          <div class="ph ph-wide ph-media">
-            <video class="ph-video" autoplay muted loop playsinline preload="metadata" poster="img/climatizacao-ventilacao.jpeg" aria-hidden="true">
-              <source src="img/videos/climatizacao-ventilacao.mp4" type="video/mp4">
-            </video>
-            <span class="ph-label">Ventilador e ar-condicionado em manutenção</span>
-          </div>
-          <div class="category-body">
-            <span class="eyebrow">Climatização</span>
-            <h3>Climatização e ventilação</h3>
-            <div class="category-examples">
-              <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20ventilador." target="_blank" rel="noopener">Ventiladores</a>
-              <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20ar-condicionado." target="_blank" rel="noopener">Ar-condicionados</a>
+            <div class="category-subgroup">
+              <span class="category-subgroup-label">🍳 Cozinha</span>
+              <div class="category-examples">
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20air%20fryer." target="_blank" rel="noopener">Air fryer</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20cafeteira%20autom%C3%A1tica." target="_blank" rel="noopener">Cafeteira automática</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20cafeteira%20manual." target="_blank" rel="noopener">Cafeteira manual</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20chaleira%20el%C3%A9trica." target="_blank" rel="noopener">Chaleira elétrica</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20coifa." target="_blank" rel="noopener">Coifa</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20cooktop." target="_blank" rel="noopener">Cooktop</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20fog%C3%A3o." target="_blank" rel="noopener">Fogão</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20fog%C3%A3o%20e%20cooktop%20de%20indu%C3%A7%C3%A3o." target="_blank" rel="noopener">Fogão e Cooktop de Indução</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20forno." target="_blank" rel="noopener">Forno</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20liquidificador." target="_blank" rel="noopener">Liquidificador</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20micro-ondas." target="_blank" rel="noopener">Micro-ondas</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20mixer." target="_blank" rel="noopener">Mixer</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20panificadora." target="_blank" rel="noopener">Panificadora</a>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div class="category-card" id="premium">
-          <div class="ph ph-wide ph-media">
-            <video class="ph-video" autoplay muted loop playsinline preload="metadata" poster="img/processo-rastreabilidade.jpeg" aria-hidden="true">
-              <source src="img/videos/processo-rastreabilidade.mp4" type="video/mp4">
-            </video>
-            <span class="ph-label">Adega climatizada e cafeteira automática</span>
-          </div>
-          <div class="category-body">
-            <span class="eyebrow">Linha premium</span>
-            <h3>Adegas, cafeteiras e linha premium</h3>
-            <div class="category-examples">
-              <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20adega%20climatizada." target="_blank" rel="noopener">Adegas climatizadas</a>
-              <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20cafeteira%20autom%C3%A1tica." target="_blank" rel="noopener">Cafeteiras automáticas</a>
-              <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20forno%20premium." target="_blank" rel="noopener">Fornos premium</a>
-              <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20fog%C3%A3o%20premium." target="_blank" rel="noopener">Fogões premium</a>
+            <div class="category-subgroup">
+              <span class="category-subgroup-label">🧺 Lavanderia</span>
+              <div class="category-examples">
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20ferro%20de%20passar." target="_blank" rel="noopener">Ferro de passar</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20m%C3%A1quina%20de%20lavar%20roupas." target="_blank" rel="noopener">Máquina de lavar roupas</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20secadora%20de%20roupas." target="_blank" rel="noopener">Secadora de roupas</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20steamer." target="_blank" rel="noopener">Steamer</a>
+              </div>
+            </div>
+            <div class="category-subgroup">
+              <span class="category-subgroup-label">🧹 Purificação e limpeza</span>
+              <div class="category-examples">
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20aspirador%20de%20p%C3%B3." target="_blank" rel="noopener">Aspirador de pó</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20aspirador%20rob%C3%B4." target="_blank" rel="noopener">Aspirador robô</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20lava-lou%C3%A7as." target="_blank" rel="noopener">Lava-louças</a>
+              </div>
+            </div>
+            <div class="category-subgroup">
+              <span class="category-subgroup-label">💇 Cuidados pessoais e bem-estar</span>
+              <div class="category-examples">
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20barbeador." target="_blank" rel="noopener">Barbeador</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20chapinha." target="_blank" rel="noopener">Chapinha</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20escova%20el%C3%A9trica." target="_blank" rel="noopener">Escova elétrica</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20inalador." target="_blank" rel="noopener">Inalador</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20uma%20m%C3%A1quina%20de%20corte%20e%20acabamento." target="_blank" rel="noopener">Máquina de corte e acabamento</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20purificador%20de%20%C3%A1gua." target="_blank" rel="noopener">Purificador de água</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20secador%20de%20cabelo." target="_blank" rel="noopener">Secador de cabelo</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20equipamento%20de%20sal%C3%A3o." target="_blank" rel="noopener">Equipamentos de salão em geral</a>
+              </div>
+            </div>
+            <div class="category-subgroup">
+              <span class="category-subgroup-label">🌬️ Climatização e ventilação</span>
+              <div class="category-examples">
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20aquecedor%20port%C3%A1til." target="_blank" rel="noopener">Aquecedor portátil</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20ar-condicionado%20port%C3%A1til." target="_blank" rel="noopener">Ar-condicionado portátil</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20climatizador%20port%C3%A1til." target="_blank" rel="noopener">Climatizador portátil</a>
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20consertar%20um%20desumidificador%20port%C3%A1til." target="_blank" rel="noopener">Desumidificador portátil</a>
+              </div>
             </div>
           </div>
         </div>
@@ -172,11 +198,11 @@
         <h2>Precisa de outra coisa?</h2>
       </div>
       <div class="choice-grid reveal-stagger" style="grid-template-columns: repeat(2, 1fr); max-width: 780px; margin-inline: auto;">
-        <a class="choice-card" href="instalacao-residencial.html">
+        <a class="choice-card" href="premium.html">
           <span class="choice-icon"><svg width="26" height="26"><use href="#icon-home"/></svg></span>
-          <h3>Instalação residencial</h3>
+          <h3>Instalação residencial de linha premium</h3>
           <p>Coifas, cooktops, fornos de embutir e adegas instaladas na sua cozinha.</p>
-          <span class="choice-cta">Ver instalação residencial <svg width="16" height="16"><use href="#icon-arrow-right"/></svg></span>
+          <span class="choice-cta">Ver linha premium <svg width="16" height="16"><use href="#icon-arrow-right"/></svg></span>
         </a>
         <a class="choice-card" href="pecas-originais.html">
           <span class="choice-icon"><svg width="26" height="26"><use href="#icon-bag"/></svg></span>
@@ -193,9 +219,13 @@
       <h2 class="reveal">Não sabe bem de qual serviço você precisa?</h2>
       <p class="lede reveal" style="margin-inline:auto">Descreva o problema do seu equipamento pelo WhatsApp e a nossa equipe identifica o melhor serviço.</p>
       <div class="final-cta-actions reveal">
-        <a class="btn btn-whatsapp" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20N%C3%A3o%20sei%20qual%20servi%C3%A7o%20preciso%2C%20pode%20me%20ajudar%3F" target="_blank" rel="noopener">
-          <svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp
-        </a>
+        <div class="wa-dropdown wa-dropdown--up wa-dropdown--side">
+          <button type="button" class="btn btn-whatsapp wa-dropdown-trigger"><svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp</button>
+          <div class="wa-dropdown-menu">
+            <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20para%20eletroport%C3%A1teis%20e%20linha%20branca." target="_blank" rel="noopener">Eletroportáteis e linha branca</a>
+            <a href="https://wa.me/554134344000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20premium." target="_blank" rel="noopener">Linha Premium</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -236,11 +266,11 @@
       <div>
         <h4>Unidades</h4>
         <ul>
-          <li>Cabral</li>
-          <li>Alto da XV</li>
-          <li>Rebouças</li>
-          <li>São Braz</li>
-          <li>Sítio Cercado</li>
+          <li><a href="nossas-lojas.html#unidade-cabral">Cabral</a></li>
+          <li><a href="nossas-lojas.html#unidade-alto-da-xv">Alto da XV</a></li>
+          <li><a href="nossas-lojas.html#unidade-reboucas">Rebouças</a></li>
+          <li><a href="nossas-lojas.html#unidade-sao-braz">São Braz</a></li>
+          <li><a href="nossas-lojas.html#unidade-sitio-cercado">Sítio Cercado</a></li>
         </ul>
       </div>
     </div>
@@ -251,10 +281,16 @@
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-  <svg width="24" height="24"><use href="#icon-whatsapp"/></svg>
-  <span>WhatsApp</span>
-</a>
+<div class="wa-dropdown wa-dropdown--up wa-float-wrap">
+  <button type="button" class="wa-float wa-dropdown-trigger" aria-label="Falar no WhatsApp">
+    <svg width="24" height="24"><use href="#icon-whatsapp"/></svg>
+    <span>WhatsApp</span>
+  </button>
+  <div class="wa-dropdown-menu">
+          <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20para%20eletroport%C3%A1teis%20e%20linha%20branca." target="_blank" rel="noopener">Eletroportáteis e linha branca</a>
+          <a href="https://wa.me/554134344000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20premium." target="_blank" rel="noopener">Linha Premium</a>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 </body>

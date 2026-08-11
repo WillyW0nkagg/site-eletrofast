@@ -15,7 +15,7 @@
 <body>
 <a class="skip-link" href="#main">Pular para o conteúdo</a>
 
-<svg style="display:none" aria-hidden="true">
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden;">
   <symbol id="icon-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2.6-.7-.7-2.6 2.1-2.1Z"/></symbol>
   <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></symbol>
   <symbol id="icon-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
@@ -41,7 +41,7 @@
     </a>
     <nav class="main-nav" aria-label="Navegação principal">
       <ul>
-        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="#servicos">Serviços</a></li>
         <li><a href="marcas-atendidas.html">Marcas</a></li>
         <li><a href="nossas-lojas.html">Lojas</a></li>
         <li><a href="pecas-originais.html">Peças</a></li>
@@ -50,31 +50,37 @@
       </ul>
     </nav>
     <div class="header-ctas">
-      <a class="btn btn-store" href="loja.html">
-        <svg width="18" height="18"><use href="#icon-bag"/></svg> Loja Online
-      </a>
-      <a class="btn btn-ghost" href="contato.html">Contato</a>
-      <a class="btn btn-primary" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener">
-        <svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp
-      </a>
+      <a class="btn btn-store" href="loja.html"><svg width="18" height="18"><use href="#icon-bag"/></svg> Loja Online</a>
+      <a class="btn btn-gold" href="premium.html">Linha Premium</a>
+      <div class="wa-dropdown">
+        <button type="button" class="btn btn-whatsapp wa-dropdown-trigger"><svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp</button>
+        <div class="wa-dropdown-menu">
+          <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20para%20eletroport%C3%A1teis%20e%20linha%20branca." target="_blank" rel="noopener">Eletroportáteis e linha branca</a>
+          <a href="https://wa.me/554134344000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20premium." target="_blank" rel="noopener">Linha Premium</a>
+        </div>
+      </div>
     </div>
     <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
   <nav class="mobile-nav" aria-label="Navegação mobile">
-    <a class="btn btn-store btn-block" href="loja.html">
-      <svg width="18" height="18"><use href="#icon-bag"/></svg> Loja Online
-    </a>
-    <a href="servicos.html">Serviços</a>
+        <a href="#servicos">Serviços</a>
     <a href="marcas-atendidas.html">Marcas</a>
     <a href="nossas-lojas.html">Lojas</a>
     <a href="pecas-originais.html">Peças</a>
     <a href="blog/index.html">Blog</a>
     <a href="sobre.html">Sobre nós</a>
     <a href="contato.html">Contato</a>
-    <a class="btn btn-whatsapp btn-block" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener">
-      <svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp
-    </a>
-  </nav>
+  
+    <a class="btn btn-store btn-block" href="loja.html"><svg width="18" height="18"><use href="#icon-bag"/></svg> Loja Online</a>
+    <a class="btn btn-gold btn-block" href="premium.html">Linha Premium</a>
+    <div class="wa-dropdown btn-block">
+      <button type="button" class="btn btn-whatsapp btn-block wa-dropdown-trigger"><svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Falar no WhatsApp</button>
+      <div class="wa-dropdown-menu">
+          <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20para%20eletroport%C3%A1teis%20e%20linha%20branca." target="_blank" rel="noopener">Eletroportáteis e linha branca</a>
+          <a href="https://wa.me/554134344000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20premium." target="_blank" rel="noopener">Linha Premium</a>
+      </div>
+    </div>
+</nav>
 </header>
 
 <main id="main">
@@ -130,47 +136,57 @@
       </div>
       <div class="category-grid-wrap">
       <div class="category-grid reveal-stagger">
-        <div class="category-card category-card--on-dark">
+        <a class="category-card category-card--on-dark" href="servicos.html">
           <div class="category-body">
             <span class="choice-icon"><svg width="24" height="24"><use href="#icon-wrench"/></svg></span>
             <h3>Eletrodomésticos</h3>
             <p>Diagnóstico e conserto de eletroportáteis e linha branca com peças originais.</p>
-            <a class="btn btn-sm btn-outline-light" href="servicos.html">Ver serviços</a>
           </div>
-        </div>
-        <div class="category-card category-card--on-dark">
+        </a>
+        <a class="category-card category-card--on-dark" href="premium.html">
           <div class="category-body">
             <span class="choice-icon"><svg width="24" height="24"><use href="#icon-home"/></svg></span>
-            <h3>Instalação residencial</h3>
+            <h3>Instalação residencial de linha premium</h3>
             <p>Instalação técnica de coifas, cooktops, fornos de embutir e adegas.</p>
-            <a class="btn btn-sm btn-outline-light" href="instalacao-residencial.html">Ver serviços</a>
           </div>
-        </div>
-        <div class="category-card category-card--on-dark">
-          <div class="category-body">
-            <span class="choice-icon"><svg width="24" height="24"><use href="#icon-layers"/></svg></span>
-            <h3>Climatização e ventilação</h3>
-            <p>Manutenção e conserto de ventiladores e ar-condicionados.</p>
-            <a class="btn btn-sm btn-outline-light" href="servicos.html#climatizacao">Ver serviços</a>
-          </div>
-        </div>
-        <div class="category-card category-card--on-dark">
-          <div class="category-body">
-            <span class="choice-icon"><svg width="24" height="24"><use href="#icon-star"/></svg></span>
-            <h3>Adegas, cafeteiras e linha premium</h3>
-            <p>Equipamentos de maior complexidade técnica atendidos por especialistas.</p>
-            <a class="btn btn-sm btn-outline-light" href="servicos.html#premium">Ver serviços</a>
-          </div>
-        </div>
-        <div class="category-card category-card--on-dark">
+        </a>
+        <a class="category-card category-card--on-dark" href="pecas-originais.html">
           <div class="category-body">
             <span class="choice-icon"><svg width="24" height="24"><use href="#icon-tag"/></svg></span>
             <h3>Peças e componentes originais</h3>
             <p>Peças de fábrica para diversas marcas, com envio para todo o Brasil.</p>
-            <a class="btn btn-sm btn-outline-light" href="pecas-originais.html">Ver serviços</a>
           </div>
-        </div>
+        </a>
       </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4.5 CAMINHOS DE ATENDIMENTO -->
+  <section id="caminhos">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Escolha a sua categoria</span>
+        <h2>Qual é o seu tipo de equipamento?</h2>
+        <p class="lede">Duas frentes de atendimento, cada uma com uma equipe especializada.</p>
+      </div>
+      <div class="icon-path-grid reveal-stagger">
+        <a class="icon-path-card" href="servicos.html">
+          <img src="img/logo-icone.png" alt="Eletroportáteis e linha branca" loading="lazy">
+          <span class="icon-path-scrim" aria-hidden="true"></span>
+          <span class="icon-path-label">
+            <strong>Eletroportáteis e linha branca</strong>
+            <span>Adegas portáteis, cafeteiras, cervejeiras portáteis, micro-ondas, fornos portáteis e mais</span>
+          </span>
+        </a>
+        <a class="icon-path-card" href="premium.html">
+          <img src="img/logo-icone-premium.jpg" alt="Linha premium" loading="lazy">
+          <span class="icon-path-scrim" aria-hidden="true"></span>
+          <span class="icon-path-label">
+            <strong>Linha premium</strong>
+            <span>Equipamentos de luxo atendidos por especialistas</span>
+          </span>
+        </a>
       </div>
     </div>
   </section>
@@ -299,7 +315,7 @@
             <li><span class="tick"><svg width="12" height="12"><use href="#icon-check"/></svg></span> Fornos de embutir e adegas climatizadas</li>
             <li><span class="tick"><svg width="12" height="12"><use href="#icon-check"/></svg></span> Manutenção preventiva residencial</li>
           </ul>
-          <a class="btn btn-primary" href="instalacao-residencial.html">Agendar atendimento residencial</a>
+          <a class="btn btn-primary" href="premium.html">Agendar atendimento residencial</a>
         </div>
       </div>
     </div>
@@ -435,9 +451,13 @@
       <h2 class="reveal">Seu aparelho merece uma assistência de confiança</h2>
       <p class="lede reveal" style="margin-inline:auto">Curitiba, expertise técnica e 5 unidades prontas para simplificar o seu atendimento.</p>
       <div class="final-cta-actions reveal">
-        <a class="btn btn-whatsapp" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener">
-          <svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Chamar no WhatsApp
-        </a>
+        <div class="wa-dropdown wa-dropdown--up wa-dropdown--side">
+          <button type="button" class="btn btn-whatsapp wa-dropdown-trigger"><svg width="18" height="18"><use href="#icon-whatsapp"/></svg> Chamar no WhatsApp</button>
+          <div class="wa-dropdown-menu">
+            <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20para%20eletroport%C3%A1teis%20e%20linha%20branca." target="_blank" rel="noopener">Eletroportáteis e linha branca</a>
+            <a href="https://wa.me/554134344000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20premium." target="_blank" rel="noopener">Linha Premium</a>
+          </div>
+        </div>
         <a class="btn btn-outline-light" href="tel:+554133624152">
           <svg width="18" height="18"><use href="#icon-phone"/></svg> Ligar para (41) 3362-4152
         </a>
@@ -480,11 +500,11 @@
       <div>
         <h4>Unidades</h4>
         <ul>
-          <li>Cabral</li>
-          <li>Alto da XV</li>
-          <li>Rebouças</li>
-          <li>São Braz</li>
-          <li>Sítio Cercado</li>
+          <li><a href="nossas-lojas.html#unidade-cabral">Cabral</a></li>
+          <li><a href="nossas-lojas.html#unidade-alto-da-xv">Alto da XV</a></li>
+          <li><a href="nossas-lojas.html#unidade-reboucas">Rebouças</a></li>
+          <li><a href="nossas-lojas.html#unidade-sao-braz">São Braz</a></li>
+          <li><a href="nossas-lojas.html#unidade-sitio-cercado">Sítio Cercado</a></li>
         </ul>
       </div>
     </div>
@@ -503,10 +523,16 @@
   </div>
 </div>
 
-<a class="wa-float" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-  <svg width="24" height="24"><use href="#icon-whatsapp"/></svg>
-  <span>WhatsApp</span>
-</a>
+<div class="wa-dropdown wa-dropdown--up wa-float-wrap">
+  <button type="button" class="wa-float wa-dropdown-trigger" aria-label="Falar no WhatsApp">
+    <svg width="24" height="24"><use href="#icon-whatsapp"/></svg>
+    <span>WhatsApp</span>
+  </button>
+  <div class="wa-dropdown-menu">
+          <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20para%20eletroport%C3%A1teis%20e%20linha%20branca." target="_blank" rel="noopener">Eletroportáteis e linha branca</a>
+          <a href="https://wa.me/554134344000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20premium." target="_blank" rel="noopener">Linha Premium</a>
+  </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
