@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
 <noscript><style>.reveal,.reveal-stagger>*{opacity:1 !important;transform:none !important;}</style></noscript>
 </head>
 <body>
@@ -98,7 +99,13 @@
           <h1>Seu eletrodoméstico parou. Sua rotina não precisa parar</h1>
           <p class="lede">Assistência técnica multimarcas em Curitiba, com peças originais, equipe especializada e 5 unidades para atender você.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="contato.html">Solicitar atendimento</a>
+            <div class="wa-dropdown">
+              <button type="button" class="btn btn-primary wa-dropdown-trigger">Solicitar atendimento</button>
+              <div class="wa-dropdown-menu">
+                <a href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20para%20eletroport%C3%A1teis%20e%20linha%20branca." target="_blank" rel="noopener">Eletroportáteis e linha branca</a>
+                <a href="https://wa.me/554134344000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20atendimento%20premium." target="_blank" rel="noopener">Linha Premium</a>
+              </div>
+            </div>
             <a class="btn btn-outline-light" href="nossas-lojas.html">Encontrar uma unidade</a>
           </div>
         </div>
@@ -121,44 +128,6 @@
         <p class="lede">Da placa eletrônica às resistências internas, entendemos a fundo cada componente antes de qualquer reparo.</p>
       </div>
       <canvas id="oven-canvas" class="oven-scroll-canvas" aria-hidden="true"></canvas>
-    </div>
-  </section>
-
-  <!-- 4. SERVIÇOS POR CONTEXTO -->
-  <section id="servicos" class="services-scroll">
-    <canvas id="servicos-canvas" class="services-scroll-video" aria-hidden="true"></canvas>
-    <div class="services-scroll-scrim" aria-hidden="true"></div>
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Nossos serviços</span>
-        <h2>A solução certa para cada tipo de equipamento</h2>
-        <p class="lede">Da bancada de laboratório à instalação embutida na sua cozinha, cada categoria tem um fluxo de atendimento dedicado.</p>
-      </div>
-      <div class="category-grid-wrap">
-      <div class="category-grid reveal-stagger">
-        <a class="category-card category-card--on-dark" href="servicos.html">
-          <div class="category-body">
-            <span class="choice-icon"><svg width="24" height="24"><use href="#icon-wrench"/></svg></span>
-            <h3>Eletrodomésticos</h3>
-            <p>Diagnóstico e conserto de eletroportáteis e linha branca com peças originais.</p>
-          </div>
-        </a>
-        <a class="category-card category-card--on-dark" href="premium.html">
-          <div class="category-body">
-            <span class="choice-icon"><svg width="24" height="24"><use href="#icon-home"/></svg></span>
-            <h3>Instalação residencial de linha premium</h3>
-            <p>Instalação técnica de coifas, cooktops, fornos de embutir e adegas.</p>
-          </div>
-        </a>
-        <a class="category-card category-card--on-dark" href="pecas-originais.html">
-          <div class="category-body">
-            <span class="choice-icon"><svg width="24" height="24"><use href="#icon-tag"/></svg></span>
-            <h3>Peças e componentes originais</h3>
-            <p>Peças de fábrica para diversas marcas, com envio para todo o Brasil.</p>
-          </div>
-        </a>
-      </div>
-      </div>
     </div>
   </section>
 
@@ -187,6 +156,29 @@
             <span>Equipamentos de luxo atendidos por especialistas</span>
           </span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4.7 LOJA DE PEÇAS -->
+  <section>
+    <div class="container">
+      <div class="parts-block reveal">
+        <div class="parts-copy">
+          <span class="eyebrow" style="color: var(--yellow-400)">Loja online</span>
+          <h2>Precisa da peça certa? Encontre sem sair de casa</h2>
+          <p class="lede">Peças originais e componentes para diversas marcas, com envio para todo o Brasil.</p>
+          <div class="parts-actions">
+            <a class="btn btn-primary" href="loja.html">Ir para a loja online</a>
+            <a class="btn btn-outline-light" href="https://wa.me/5541984811513?text=Ol%C3%A1%21%20Quero%20encomendar%20uma%20pe%C3%A7a." target="_blank" rel="noopener">Encomende sua peça</a>
+          </div>
+        </div>
+        <div class="ph ph-wide ph-media">
+          <video class="ph-video" autoplay muted loop playsinline preload="metadata" poster="img/pecas-originais-loja-online.jpeg" aria-hidden="true">
+            <source src="img/videos/pecas-originais-loja-online.mp4" type="video/mp4">
+          </video>
+          <span class="ph-label">Catálogo de peças originais</span>
+        </div>
       </div>
     </div>
   </section>
@@ -220,34 +212,6 @@
           <h3>Executamos com acompanhamento</h3>
           <p>Serviço realizado com retorno sobre o andamento do seu equipamento.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. MARCAS AUTORIZADAS -->
-  <section>
-    <div class="container">
-      <div class="section-head center reveal">
-        <span class="eyebrow">Credenciamento</span>
-        <h2>Sua marca está em boas mãos</h2>
-        <p class="lede">Somos credenciados por inúmeras marcas, o que garante procedência técnica e peças compatíveis com a garantia do fabricante.</p>
-      </div>
-      <div class="brand-grid reveal-stagger">
-        <div class="brand-chip"><img src="img/marcas/smeg.png" alt="Smeg" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/wolf.png" alt="Wolf" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/sub-zero.png" alt="Sub Zero" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/kenwood.png" alt="Kenwood" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/delonghi.jpg" alt="Delonghi" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/oster.jpg" alt="Oster" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/franke.jpg" alt="Franke" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/gorenje.png" alt="Gorenje" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/ariston.png" alt="Ariston" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/cuisinart.jpg" alt="Cuisinart" loading="lazy"></div>
-        <div class="brand-chip"><img src="img/marcas/mondial.jpg" alt="Mondial" loading="lazy"></div>
-        <div class="brand-chip">+ outras</div>
-      </div>
-      <div style="text-align:center; margin-top: var(--space-8);">
-        <a class="btn btn-outline-dark" href="marcas-atendidas.html">Consultar marcas atendidas</a>
       </div>
     </div>
   </section>
@@ -328,79 +292,17 @@
         <span class="eyebrow">Unidades</span>
         <h2>Cinco unidades. Uma rede pronta para atender Curitiba</h2>
       </div>
-      <div class="store-grid reveal-stagger">
-        <div class="store-card">
-          <span class="store-tag">Cabral</span>
-          <h3>Eletro Fast Cabral</h3>
-          <address><svg width="14" height="14" style="display:inline;vertical-align:-2px"><use href="#icon-pin"/></svg> Av. Munhoz da Rocha, 1509 — Curitiba/PR</address>
-          <div class="store-actions">
-            <a class="btn btn-sm btn-outline-dark" href="https://www.google.com/maps/search/?api=1&query=Av.+Munhoz+da+Rocha,+1509,+Curitiba" target="_blank" rel="noopener">Como chegar</a>
-            <a class="btn btn-sm btn-ghost" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20unidade%20Cabral." target="_blank" rel="noopener">Falar com esta unidade</a>
-          </div>
-        </div>
-        <div class="store-card">
-          <span class="store-tag">Alto da XV</span>
-          <h3>Eletro Fast Alto da XV</h3>
-          <address><svg width="14" height="14" style="display:inline;vertical-align:-2px"><use href="#icon-pin"/></svg> Rua XV de Novembro, 2676 — ao lado do Banco do Brasil — Curitiba/PR</address>
-          <div class="store-actions">
-            <a class="btn btn-sm btn-outline-dark" href="https://www.google.com/maps/search/?api=1&query=Rua+XV+de+Novembro,+2676,+Curitiba" target="_blank" rel="noopener">Como chegar</a>
-            <a class="btn btn-sm btn-ghost" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20unidade%20Alto%20da%20XV." target="_blank" rel="noopener">Falar com esta unidade</a>
-          </div>
-        </div>
-        <div class="store-card">
-          <span class="store-tag">Rebouças</span>
-          <h3>Eletro Fast Rebouças</h3>
-          <address><svg width="14" height="14" style="display:inline;vertical-align:-2px"><use href="#icon-pin"/></svg> Rua Alferes Poli, 1712 — esquina com Rua Chile — Curitiba/PR</address>
-          <div class="store-actions">
-            <a class="btn btn-sm btn-outline-dark" href="https://www.google.com/maps/search/?api=1&query=Rua+Alferes+Poli,+1712,+Curitiba" target="_blank" rel="noopener">Como chegar</a>
-            <a class="btn btn-sm btn-ghost" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20unidade%20Rebou%C3%A7as." target="_blank" rel="noopener">Falar com esta unidade</a>
-          </div>
-        </div>
-        <div class="store-card">
-          <span class="store-tag">São Braz</span>
-          <h3>Eletro Fast São Braz</h3>
-          <address><svg width="14" height="14" style="display:inline;vertical-align:-2px"><use href="#icon-pin"/></svg> Rua Antônio Escorsin, 1086 — em frente à Tintas Vergínia — Curitiba/PR</address>
-          <div class="store-actions">
-            <a class="btn btn-sm btn-outline-dark" href="https://www.google.com/maps/search/?api=1&query=Rua+Ant%C3%B4nio+Escorsin,+1086,+Curitiba" target="_blank" rel="noopener">Como chegar</a>
-            <a class="btn btn-sm btn-ghost" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20unidade%20S%C3%A3o%20Braz." target="_blank" rel="noopener">Falar com esta unidade</a>
-          </div>
-        </div>
-        <div class="store-card">
-          <span class="store-tag">Sítio Cercado</span>
-          <h3>Eletro Fast Sítio Cercado</h3>
-          <address><svg width="14" height="14" style="display:inline;vertical-align:-2px"><use href="#icon-pin"/></svg> Rua São José dos Pinhais, 1653 — Curitiba/PR</address>
-          <div class="store-actions">
-            <a class="btn btn-sm btn-outline-dark" href="https://www.google.com/maps/search/?api=1&query=Rua+S%C3%A3o+Jos%C3%A9+dos+Pinhais,+1653,+Curitiba" target="_blank" rel="noopener">Como chegar</a>
-            <a class="btn btn-sm btn-ghost" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20unidade%20S%C3%ADtio%20Cercado." target="_blank" rel="noopener">Falar com esta unidade</a>
-          </div>
-        </div>
-        <div class="store-card" style="justify-content:center; align-items:flex-start; background: var(--blue-900); border-color: var(--blue-900);">
-          <span class="store-tag" style="background:rgba(255,255,255,0.12); border-color:rgba(255,255,255,0.2); color:var(--yellow-400);">Central</span>
-          <h3 style="color:var(--white)">Não sabe qual unidade escolher?</h3>
-          <p style="color:rgba(255,255,255,0.75); font-size:0.92rem;">Fale com a nossa central e a gente direciona você para a unidade mais próxima.</p>
-          <div class="store-actions">
-            <a class="btn btn-sm btn-primary" href="tel:+554133624152">Ligar (41) 3362-4152</a>
-          </div>
-        </div>
+      <div class="units-map-wrap reveal">
+        <div id="units-map" class="units-map" role="application" aria-label="Mapa com as 5 unidades da Eletro Fast em Curitiba"></div>
       </div>
-    </div>
-  </section>
-
-  <!-- 10. LOJA DE PEÇAS -->
-  <section>
-    <div class="container">
-      <div class="parts-block reveal">
-        <div class="parts-copy">
-          <span class="eyebrow" style="color: var(--yellow-400)">Loja online</span>
-          <h2>Precisa da peça certa? Encontre sem sair de casa</h2>
-          <p class="lede">Peças originais e componentes para diversas marcas, com envio para todo o Brasil.</p>
-          <a class="btn btn-primary" href="loja.html">Ir para a loja online</a>
+      <div class="units-map-central reveal">
+        <div>
+          <strong>Não sabe qual unidade escolher?</strong>
+          <p>Fale com a nossa central e a gente direciona você para a unidade mais próxima do seu endereço.</p>
         </div>
-        <div class="ph ph-wide ph-media">
-          <video class="ph-video" autoplay muted loop playsinline preload="metadata" poster="img/pecas-originais-loja-online.jpeg" aria-hidden="true">
-            <source src="img/videos/pecas-originais-loja-online.mp4" type="video/mp4">
-          </video>
-          <span class="ph-label">Catálogo de peças originais</span>
+        <div class="store-actions">
+          <a class="btn btn-sm btn-primary" href="tel:+554133624152">Ligar (41) 3362-4152</a>
+          <a class="btn btn-sm btn-outline-light" href="https://wa.me/5541984811513" target="_blank" rel="noopener">WhatsApp central</a>
         </div>
       </div>
     </div>
@@ -424,7 +326,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">Vocês fazem atendimento residencial? <span class="plus" aria-hidden="true"></span></button>
-          <div class="faq-answer"><div class="faq-answer-inner"><p>Sim, para instalação e manutenção de coifas, cooktops, fornos e adegas. Agende pelo WhatsApp informando seu endereço e o equipamento.</p></div></div>
+          <div class="faq-answer"><div class="faq-answer-inner"><p>Sim, para instalação e manutenção de coifas, cooktops, fornos, adegas e muito mais. Agende pelo WhatsApp informando seu endereço e o equipamento.</p></div></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">Vocês vendem peças originais? <span class="plus" aria-hidden="true"></span></button>
@@ -538,6 +440,7 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 <script src="js/oven-scroll.js"></script>
 <script src="js/servicos-scroll.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

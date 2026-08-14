@@ -99,8 +99,25 @@
         <h2>Todos os produtos</h2>
       </div>
 
-      <div class="category-filter reveal-stagger" role="group" aria-label="Filtrar produtos por categoria">
-        <button type="button" class="is-active" data-filter="all">Todos</button>
+      <div class="master-filter reveal">
+        <button type="button" class="master-filter-btn is-active" data-master="all">Todos os produtos</button>
+        <button type="button" class="master-filter-btn" data-master="pecas">Peças</button>
+        <button type="button" class="master-filter-btn" data-master="equipamentos">Equipamentos</button>
+      </div>
+
+      <div class="category-filter reveal-stagger" role="group" aria-label="Filtrar peças por categoria" data-master-group="pecas" hidden>
+        <button type="button" class="is-active" data-filter="all">Todas as peças</button>
+        <button type="button" data-filter="pecas-para-air-fryer">Air Fryer</button>
+        <button type="button" data-filter="pecas-para-ar-condicionado">Ar-condicionado</button>
+        <button type="button" data-filter="pecas-para-aspirador">Aspirador</button>
+        <button type="button" data-filter="pecas-para-cooktop">Cooktop</button>
+        <button type="button" data-filter="correiaparapanificadora">Panificadora</button>
+        <button type="button" data-filter="pecas-para-purificador-de-agua">Purificador</button>
+        <button type="button" data-filter="peca-par-ventilador">Ventilador</button>
+      </div>
+
+      <div class="category-filter reveal-stagger" role="group" aria-label="Filtrar equipamentos por categoria" data-master-group="equipamentos" hidden>
+        <button type="button" class="is-active" data-filter="all">Todos os equipamentos</button>
         <button type="button" data-filter="adegaserefrigeradores">Adegas e Refrigeradores</button>
         <button type="button" data-filter="aquecedores">Aquecedores</button>
         <button type="button" data-filter="aspirador">Aspirador</button>
@@ -112,21 +129,6 @@
         <button type="button" data-filter="panela-pressao">Panela Pressão</button>
         <button type="button" data-filter="panificadora">Panificadora</button>
         <button type="button" data-filter="range-top">Range Top</button>
-        <div class="filter-dropdown">
-          <button type="button" class="filter-dropdown-trigger">
-            Peças
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-          </button>
-          <div class="filter-dropdown-menu">
-            <button type="button" data-filter="pecas-para-air-fryer">Peças para Air Fryer</button>
-            <button type="button" data-filter="pecas-para-ar-condicionado">Peças para Ar-condicionado</button>
-            <button type="button" data-filter="pecas-para-aspirador">Peças para Aspirador</button>
-            <button type="button" data-filter="pecas-para-cooktop">Peças para Cooktop</button>
-            <button type="button" data-filter="correiaparapanificadora">Peças para Panificadora</button>
-            <button type="button" data-filter="pecas-para-purificador-de-agua">Peças para Purificador</button>
-            <button type="button" data-filter="peca-par-ventilador">Peças para Ventilador</button>
-          </div>
-        </div>
       </div>
 
       <div class="product-grid reveal-stagger">

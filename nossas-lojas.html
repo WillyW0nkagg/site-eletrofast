@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
 <noscript><style>.reveal,.reveal-stagger>*{opacity:1 !important;transform:none !important;}</style></noscript>
 </head>
 <body>
@@ -83,78 +84,18 @@
 
   <section>
     <div class="container">
-      <div class="store-grid reveal-stagger">
-
-        <div class="store-card" id="unidade-cabral">
-          <span class="store-tag">Cabral</span>
-          <div class="store-map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3603.9968869760037!2d-49.2464298!3d-25.4049148!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce535f944aaa9%3A0x8199608bf70c6577!2sEletro%20Fast%20-%20Cabral!5e0!3m2!1spt-BR!2sbr!4v1634671543588!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa — Eletro Fast Cabral" allowfullscreen></iframe></div>
-          <h3>Eletro Fast Cabral</h3>
-          <address><svg width="14" height="14" style="display:inline;vertical-align:-2px"><use href="#icon-pin"/></svg> Av. Munhoz da Rocha, 1509 — Curitiba/PR</address>
-          <p style="font-size:0.88rem; color:var(--ink-500);"><svg width="14" height="14" style="display:inline;vertical-align:-2px"><use href="#icon-clock"/></svg> Seg. a sex.: 09h–18h · Sáb.: 09h–13h</p>
-          <div class="store-actions">
-            <a class="btn btn-sm btn-outline-dark" href="https://www.google.com/maps/search/?api=1&query=Av.+Munhoz+da+Rocha,+1509,+Curitiba" target="_blank" rel="noopener">Como chegar</a>
-            <a class="btn btn-sm btn-ghost" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20unidade%20Cabral." target="_blank" rel="noopener">Falar com esta unidade</a>
-          </div>
+      <div class="units-map-wrap reveal">
+        <div id="units-map" class="units-map" role="application" aria-label="Mapa com as 5 unidades da Eletro Fast em Curitiba"></div>
+      </div>
+      <div class="units-map-central reveal">
+        <div>
+          <strong>Não sabe qual unidade escolher?</strong>
+          <p>Fale com a nossa central e a gente direciona você para a unidade mais próxima do seu endereço.</p>
         </div>
-
-        <div class="store-card" id="unidade-alto-da-xv">
-          <span class="store-tag">Alto da XV</span>
-          <div class="store-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.3257998690924!2d-49.25044208498587!3d-25.427369083789582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce44be52682ed%3A0xbcd016347a1cdff8!2sRua+XV+de+Novembro%2C+2676+-+Alto+da+XV%2C+Curitiba+-+PR!5e0!3m2!1sen!2sbr!4v1501973668588" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa — Eletro Fast Alto da XV" allowfullscreen></iframe></div>
-          <h3>Eletro Fast Alto da XV</h3>
-          <address><svg width="14" height="14" style="display:inline;vertical-align:-2px"><use href="#icon-pin"/></svg> Rua XV de Novembro, 2676 — ao lado do Banco do Brasil — Curitiba/PR</address>
-          <p style="font-size:0.88rem; color:var(--ink-500);"><svg width="14" height="14" style="display:inline;vertical-align:-2px"><use href="#icon-clock"/></svg> Seg. a sex.: 09h–18h · Sáb.: 09h–13h · Estacionamento próprio</p>
-          <div class="store-actions">
-            <a class="btn btn-sm btn-outline-dark" href="https://www.google.com/maps/search/?api=1&query=Rua+XV+de+Novembro,+2676,+Curitiba" target="_blank" rel="noopener">Como chegar</a>
-            <a class="btn btn-sm btn-ghost" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20unidade%20Alto%20da%20XV." target="_blank" rel="noopener">Falar com esta unidade</a>
-          </div>
+        <div class="store-actions">
+          <a class="btn btn-sm btn-primary" href="tel:+554133624152">Ligar (41) 3362-4152</a>
+          <a class="btn btn-sm btn-outline-light" href="https://wa.me/5541984811513" target="_blank" rel="noopener">WhatsApp central</a>
         </div>
-
-        <div class="store-card" id="unidade-reboucas">
-          <span class="store-tag">Rebouças</span>
-          <div class="store-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.6178126138625!2d-49.26891978585548!3d-25.45103798377873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce48a537ce80d%3A0x3fdf6a731bd6f00e!2sR.+Alferes+Poli%2C+1712+-+Centro%2C+Curitiba+-+PR%2C+80220-050!5e0!3m2!1spt-BR!2sbr!4v1552484856558" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa — Eletro Fast Rebouças" allowfullscreen></iframe></div>
-          <h3>Eletro Fast Rebouças</h3>
-          <address><svg width="14" height="14" style="display:inline;vertical-align:-2px"><use href="#icon-pin"/></svg> Rua Alferes Poli, 1712 — esquina com Rua Chile — Curitiba/PR</address>
-          <p style="font-size:0.88rem; color:var(--ink-500);"><svg width="14" height="14" style="display:inline;vertical-align:-2px"><use href="#icon-clock"/></svg> Seg. a sex.: 09h–18h · Sáb.: 09h–13h</p>
-          <div class="store-actions">
-            <a class="btn btn-sm btn-outline-dark" href="https://www.google.com/maps/search/?api=1&query=Rua+Alferes+Poli,+1712,+Curitiba" target="_blank" rel="noopener">Como chegar</a>
-            <a class="btn btn-sm btn-ghost" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20unidade%20Rebou%C3%A7as." target="_blank" rel="noopener">Falar com esta unidade</a>
-          </div>
-        </div>
-
-        <div class="store-card" id="unidade-sao-braz">
-          <span class="store-tag">São Braz</span>
-          <div class="store-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.7041483830867!2d-49.34295768498619!3d-25.414711983795474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce195f6fdf589%3A0x9d0ec9b853a5aec1!2sRua+Ant%C3%B4nio+Escorsin%2C+1086+-+Santa+Felicidade%2C+Curitiba+-+PR!5e0!3m2!1sen!2sbr!4v1501969207918" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa — Eletro Fast São Braz" allowfullscreen></iframe></div>
-          <h3>Eletro Fast São Braz</h3>
-          <address><svg width="14" height="14" style="display:inline;vertical-align:-2px"><use href="#icon-pin"/></svg> Rua Antônio Escorsin, 1086 — em frente à Tintas Vergínia — Curitiba/PR</address>
-          <p style="font-size:0.88rem; color:var(--ink-500);"><svg width="14" height="14" style="display:inline;vertical-align:-2px"><use href="#icon-clock"/></svg> Seg. a sex.: 09h–18h · Sáb.: 09h–13h</p>
-          <div class="store-actions">
-            <a class="btn btn-sm btn-outline-dark" href="https://www.google.com/maps/search/?api=1&query=Rua+Ant%C3%B4nio+Escorsin,+1086,+Curitiba" target="_blank" rel="noopener">Como chegar</a>
-            <a class="btn btn-sm btn-ghost" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20unidade%20S%C3%A3o%20Braz." target="_blank" rel="noopener">Falar com esta unidade</a>
-          </div>
-        </div>
-
-        <div class="store-card" id="unidade-sitio-cercado">
-          <span class="store-tag">Sítio Cercado</span>
-          <div class="store-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599.8032694629205!2d-49.26085028492555!3d-25.544929243698046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcfbc74a8febb1%3A0x5ab6aac0fed595e3!2sR.%20S%C3%A3o%20Jos%C3%A9%20dos%20Pinhais%2C%201653%20-%20S%C3%ADtio%20Cercado%2C%20Curitiba%20-%20PR%2C%2081920-250!5e0!3m2!1spt-BR!2sbr!4v1595247880942!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa — Eletro Fast Sítio Cercado" allowfullscreen></iframe></div>
-          <h3>Eletro Fast Sítio Cercado</h3>
-          <address><svg width="14" height="14" style="display:inline;vertical-align:-2px"><use href="#icon-pin"/></svg> Rua São José dos Pinhais, 1653 — Curitiba/PR</address>
-          <p style="font-size:0.88rem; color:var(--ink-500);"><svg width="14" height="14" style="display:inline;vertical-align:-2px"><use href="#icon-clock"/></svg> Seg. a sex.: 09h–18h · Sáb.: 09h–13h · Estacionamento próprio</p>
-          <div class="store-actions">
-            <a class="btn btn-sm btn-outline-dark" href="https://www.google.com/maps/search/?api=1&query=Rua+S%C3%A3o+Jos%C3%A9+dos+Pinhais,+1653,+Curitiba" target="_blank" rel="noopener">Como chegar</a>
-            <a class="btn btn-sm btn-ghost" href="https://wa.me/5541984811513?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20unidade%20S%C3%ADtio%20Cercado." target="_blank" rel="noopener">Falar com esta unidade</a>
-          </div>
-        </div>
-
-        <div class="store-card" style="background: var(--blue-900); border-color: var(--blue-900);">
-          <span class="store-tag" style="background:rgba(255,255,255,0.12); border-color:rgba(255,255,255,0.2); color:var(--yellow-400);">Central</span>
-          <h3 style="color:var(--white)">Não sabe qual unidade escolher?</h3>
-          <p style="color:rgba(255,255,255,0.75); font-size:0.92rem;">Fale com a nossa central e a gente direciona você para a unidade mais próxima do seu endereço.</p>
-          <div class="store-actions">
-            <a class="btn btn-sm btn-primary" href="tel:+554133624152">Ligar (41) 3362-4152</a>
-            <a class="btn btn-sm btn-outline-light" href="https://wa.me/5541984811513" target="_blank" rel="noopener">WhatsApp central</a>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -221,6 +162,7 @@
   </div>
 </div>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
