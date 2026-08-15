@@ -495,7 +495,7 @@ section { padding-block: var(--space-12); }
   .proof-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-2); }
   .proof-item { padding: var(--space-2) 0.3rem; gap: 0.15rem; min-width: 0; }
   .proof-item strong { font-size: 1.05rem; }
-  .proof-item span { font-size: 0.58rem; line-height: 1.2; overflow-wrap: break-word; }
+  .proof-item span { font-size: 0.62rem; line-height: 1.25; overflow-wrap: normal; word-break: keep-all; hyphens: none; }
 }
 .proof-item {
   background: var(--white);
@@ -723,13 +723,7 @@ section { padding-block: var(--space-12); }
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-6);
 }
-@media (max-width: 720px) {
-  .icon-path-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
-  .icon-path-card { aspect-ratio: 3 / 4; min-width: 0; }
-  .icon-path-label { left: var(--space-3); right: var(--space-3); bottom: var(--space-3); gap: 0.2rem; }
-  .icon-path-label strong { font-size: 1rem; line-height: 1.2; }
-  .icon-path-label span { font-size: 0.72rem; line-height: 1.3; }
-}
+#servicos .parts-block { margin-top: var(--space-8); }
 .icon-path-card {
   position: relative;
   display: block;
@@ -773,6 +767,13 @@ section { padding-block: var(--space-12); }
 .icon-path-label span {
   font-size: 0.92rem;
   color: rgba(255,255,255,0.82);
+}
+@media (max-width: 720px) {
+  .icon-path-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
+  .icon-path-card { aspect-ratio: 3 / 5; min-width: 0; }
+  .icon-path-label { left: var(--space-3); right: var(--space-3); bottom: var(--space-3); gap: 0.2rem; }
+  .icon-path-label strong { font-size: 0.95rem; line-height: 1.2; }
+  .icon-path-label span { font-size: 0.7rem; line-height: 1.3; }
 }
 
 /* ==========================================================================
@@ -1213,6 +1214,7 @@ body.premium-page { background: var(--black-950); }
 }
 .units-map-central p { color: rgba(255,255,255,0.75); font-size: 0.92rem; margin: 0; }
 .units-map-central strong { display: block; color: var(--white); font-family: var(--font-display); font-size: 1.05rem; margin-bottom: 0.15rem; }
+.units-map-central .store-actions { gap: var(--space-4); }
 
 /* ==========================================================================
    Parts store block
@@ -1372,6 +1374,7 @@ body.premium-page { background: var(--black-950); }
   flex-direction: column;
   gap: 2px;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
   z-index: 120;
 }
